@@ -7,8 +7,6 @@ from torchvision import datasets
 from torchvision.transforms import ToTensor
 
 # Load database of real world vision data. 
-print("Something")
-
 
 # Download training data from open datasets.
 training_data = datasets.FashionMNIST(
@@ -109,6 +107,7 @@ print("Done!")
 ## Save model
 torch.save(model.state_dict(), "model.pth")
 print("Saved PyTorch Model State to model.pth")
+
 
 #Loading models
 model = NeuralNetwork().to(device)

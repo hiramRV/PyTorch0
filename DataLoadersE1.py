@@ -67,7 +67,6 @@ def main(CPU=False):
             local_x, local_y= X_batch.to(device), y_batch.to(device)
             # Predict
             y_pred = model(local_x)
-            y_pred.to(device)
             loss = loss_fn(y_pred, local_y)
             optimizer.zero_grad()
             loss.backward()
